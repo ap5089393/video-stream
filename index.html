@@ -2,33 +2,15 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Streaming Video</title>
+  <title>Stream Video</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Stream Video</h1>
+  <input type="text" id="search" placeholder="Cari video...">
+  <div id="videos"></div>
 
-<h2>Video dari Doodstream</h2>
-<div id="list">Loading...</div>
-
-<script>
-fetch("https://doodapi.com/api/file/list?key=553862ugvs3w6k5f82i0u9")
-  .then(r => r.json())
-  .then(d => {
-    let html = "";
-    d.result.files.forEach(v => {
-      html += `
-        <h3>${v.title}</h3>
-        <iframe 
-          src="https://doodstream.com/e/${v.file_code}"
-          width="480"
-          height="270"
-          allowfullscreen>
-        </iframe>
-        <hr>
-      `;
-    });
-    document.getElementById("list").innerHTML = html;
-  });
-</script>
-
+  <script src="config.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
