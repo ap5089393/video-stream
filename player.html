@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Player</title>
+</head>
+<body>
+  <iframe id="player" width="100%" height="500" allowfullscreen></iframe>
+
+  <script>
+    const id = new URLSearchParams(location.search).get("id");
+    document.getElementById("player").src =
+      "https://doodstream.com/e/" + id;
+  </script>
+</body>
+</html>
