@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Stream Video</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial; background:#111; color:#fff }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:15px }
+    .card { background:#222; padding:10px; border-radius:8px }
+    img { width:100%; border-radius:6px }
+  </style>
 </head>
 <body>
-  <h1>Stream Video</h1>
-  <input type="text" id="search" placeholder="Cari video...">
-  <div id="videos"></div>
 
-  <script src="config.js"></script>
-  <script src="script.js"></script>
+<h2>Video Terbaru</h2>
+<div id="videoList" class="grid"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
